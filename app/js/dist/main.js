@@ -13,7 +13,7 @@ var currentHours = today.getHours();
 currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
 currentHours = ( currentHours == 0 ) ? 12 : currentHours;
 
-var time2 = currentHours + ":" + timeMinutes;
+var time2 = currentHours + " : " + timeMinutes;
 var date = getOrdinalNum(today.getDate()); //date x + ordinal number (th)
 
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
