@@ -4,7 +4,7 @@ function getOrdinalNum(n: any) {
 
 var today = new Date();
 var time = today.getHours()  //time HH:MM
-var time2 = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
+var time2 = today.getHours() + ":" + today.getMinutes()
 var date = getOrdinalNum(today.getDate()) //date x + ordinal number (th)
 
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
