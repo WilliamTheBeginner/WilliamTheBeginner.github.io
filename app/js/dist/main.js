@@ -6,7 +6,7 @@ var time = today.getHours(); //time HH:MM
 var date = getOrdinalNum(today.getDate()); //date x + ordinal number (th)
 var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 document.querySelector('#date').innerHTML = monthNames[today.getMonth()] + ' ' + date;
-document.querySelector('#date').innerHTML = today.getHours();
+document.querySelector('#time').innerHTML = today.getTime();
 var hour = today.getHours();
 if (hour >= 08 && hour <= 11) {
     document.querySelector('#greeting').innerHTML = 'Good Morning.';
