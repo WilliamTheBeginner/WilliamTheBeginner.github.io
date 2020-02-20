@@ -3,7 +3,11 @@ function getOrdinalNum(n) {
 }
 var today = new Date();
 var time = today.getHours(); //time HH:MM
-var time2 = today.getHours() + ":" + today.getMinutes();
+var timeMinutes = today.getMinutes(); //minutes variable
+timeMinutes = ( timeMinutes < 10 ? "0" : "" ) + timeMinutes;
+
+var time2 = today.getHours() + ":" + timeMinutes;
+
 var date = getOrdinalNum(today.getDate()); //date x + ordinal number (th)
 var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 document.querySelector('#date').innerHTML = monthNames[today.getMonth()] + ' ' + date;
