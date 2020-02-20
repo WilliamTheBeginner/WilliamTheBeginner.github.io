@@ -5,16 +5,21 @@ function getOrdinalNum(n: any) {
 var today = new Date();
 var time = today.getHours()  //time HH:MM
 var timeMinutes = today.getMinutes()
-timeMinutes = ( timeMinutes < 10 ? "0" : "" ) + timeMinutes;
+timeMinutes = ( timeMinutes < 10 ? "0" : "" ) + timeMinutes
+var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM"
+var currentHours = today.getHours()
 
-var time2 = today.getHours() + ":" + timeMinutes
+currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours
+currentHours = ( currentHours == 0 ) ? 12 : currentHours
+
+var time2 = currentHours + ":" + timeMinutes
 var date = getOrdinalNum(today.getDate()) //date x + ordinal number (th)
 
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 document.querySelector('#date').innerHTML = monthNames[today.getMonth()] + ' ' + date
 
-document.querySelector('#time').innerHTML = time2 
+document.querySelector('#time').innerHTML = time2 + ' ' + timeofDay
 
 var hour = today.getHours()
 if (hour >= 08 && hour <= 11) {
