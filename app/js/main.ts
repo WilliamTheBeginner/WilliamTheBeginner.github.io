@@ -10,6 +10,8 @@ const monthNames = ["January", "February", "March", "April", "May", "June", "Jul
 
 document.querySelector('#date').innerHTML = monthNames[today.getMonth()] + ' ' + date
 
+document.querySelector('#time').innerHTML = today.getHours()
+
 var hour = today.getHours()
 if (hour >= 08 && hour <= 11) {
     document.querySelector('#greeting').innerHTML = 'Good Morning.'
