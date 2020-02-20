@@ -36,6 +36,9 @@ h1 {
 #date {
   font-size: 30px; }
 
+#time {
+  font-size: 30px; }
+
 .container {
   margin: 20px;
   display: inline-block; }
